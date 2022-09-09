@@ -1,0 +1,331 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+
+.nav {
+  z-index: 1001;
+  color: white;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav h1 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.link {
+  position: relative;
+  background: none;
+  border: none;
+  background: black;
+}
+
+.hero {
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.crypto-box {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  z-index: 1000;
+}
+
+.test {
+  height: 100px;
+}
+
+.p {
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.active-scroll {
+  opacity: 1;
+}
+
+.crypto-card {
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+  margin: 1rem 1rem;
+  color: white;
+  font-family: "Inconsolata", monospace;
+  text-transform: uppercase;
+  background-color: rgb(37, 36, 36);
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out,
+    height .5s ease-in-out, width .5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  cursor: pointer;
+ 
+}
+
+.crypto-card h2 {
+    font-size: 20px;
+
+}
+
+.card-active {
+  transform: scale(1.1);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  height: 200px;
+  width: 200px;
+}
+
+/* .crypto-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 5px 10px rgba(0,0,0,.3);
+    height: 200px;
+    width: 200px;
+} */
+
+.crypto-info {
+  transition: opacity 1.5s ease-in-out;
+  font-size: 10px;
+  background-color: rgb(31, 30, 30);
+  padding: .5rem;
+  box-shadow: 0px 4px 5px rgb(46, 45, 45);
+  width: 85%;
+ 
+}
+
+/* .crypto-card:hover > .crypto-info {
+    opacity: 1;
+} */
+
+.crypto-title {
+  padding: 0.25rem;
+}
+
+.crypto-price {
+  padding: 0.25rem;
+}
+
+.price-span {
+  color: rgb(35, 230, 35);
+}
+
+.bad-span {
+  color: red;
+}
+
+.crypto-image {
+  height: 25px;
+}
+
+.head-div {
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.head-div h2 {
+  margin-right: 0.25rem;
+}
+
+video {
+  top: 0;
+  left: 0;
+  position: fixed;
+  object-fit: cover;
+  opacity: 0.9;
+  height: 100%;
+  width: 100%;
+}
+
+footer {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    z-index: 2000;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.facebook-logo, .twitter-logo, .instagram-logo {
+    color: rgb(141, 137, 137);
+    font-size: 24px;
+    margin: 1rem;
+    transition: color .5s ease-in-out, transform .5s ease-in-out;
+}
+
+.facebook-logo:hover {
+    color: rgb(48, 78, 179);
+    transform: scale(1.2);
+}
+
+.twitter-logo:hover {
+    color:rgb(78, 158, 233);
+    transform: scale(1.2);
+}
+
+.instagram-logo:hover {
+    color: rgb(223, 138, 197);
+    transform: scale(1.2);
+}
+
+@keyframes blue {
+  0% {
+    transform: rotate(10deg)
+  }
+
+  3% {
+    transform: rotate(20deg)
+  }
+
+  6% {
+    transform: rotate(30deg);
+  }
+
+  9% {
+    transform: rotate(40deg);
+  }
+
+  12% {
+    transform: rotate(50deg);
+  }
+
+  15% {
+    transform: rotate(60deg);
+  }
+
+  18% {
+    transform: rotate(70deg);
+  }
+
+  21% {
+    transform: rotate(80deg);
+  }
+  24% {
+    transform: rotate(90deg);
+  }
+
+  27% {
+    transform: rotate(100deg);
+  }
+
+  30% {
+    transform: rotate(110deg);
+  }
+
+  33% {
+    transform: rotate(120deg);
+  }
+
+  36% {
+    transform: rotate(130deg)
+  }
+
+  39% {
+    transform: rotate(140deg);
+  }
+  42% {
+    transform: rotate(150deg);
+  }
+
+  45% {
+    transform: rotate(160deg);
+  }
+  48% {
+    transform: rotate(170deg);
+  }
+  51% {
+    transform: rotate(180deg);
+  }
+  54% {
+    transform: rotate(190deg);
+  }
+  57% {
+    transform: rotate(200deg);
+  }
+  60% {
+    transform: rotate(210deg);
+  }
+
+  63% {
+    transform: rotate(220deg);
+  }
+  66% {
+    transform: rotate(230deg);
+  }
+  69% {
+    transform:rotate(240deg);
+  }
+  72% {
+    transform: rotate(250deg);
+  }
+  75% {
+    transform: rotate(260deg);
+  }
+  78% {
+    transform: rotate(270deg);
+  }
+  81% {
+    transform: rotate(280deg);
+  }
+  84% {
+    transform: rotate(290deg);
+  }
+  87% {
+    transform: rotate(300deg);
+  }
+  90% {
+    transform: rotate(310deg);
+  }
+  93% {
+    transform: rotate(320deg);
+  }
+  96% {
+    transform: rotate(340deg);
+  }
+
+  99% {
+    transform: rotate(360deg);
+  }
+}
+
+.red {
+  animation: blue 2s 5;
+  color: rgb(35, 230, 35);
+  background: none;
+  outline: none;
+  border: none;
+}
+
+
+.offline {
+  color: red;
+    font-family: "Inconsolata", monospace;
+
+}
+
+.nav h1 {
+  margin-right: 2rem;
+}
+
+
