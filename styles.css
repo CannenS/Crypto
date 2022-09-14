@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
- 
 }
 
 .nav {
@@ -15,7 +14,7 @@
 }
 
 .nav h1 {
-    font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
 }
 
 .link {
@@ -74,18 +73,16 @@
   text-transform: uppercase;
   background-color: rgb(37, 36, 36);
   transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out,
-    height .5s ease-in-out, width .5s ease-in-out;
+    height 0.5s ease-in-out, width 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 15px;
   cursor: pointer;
- 
 }
 
 .crypto-card h2 {
-    font-size: 20px;
-
+  font-size: 20px;
 }
 
 .card-active {
@@ -106,10 +103,9 @@
   transition: opacity 1.5s ease-in-out;
   font-size: 10px;
   background-color: rgb(31, 30, 30);
-  padding: .5rem;
+  padding: 0.5rem;
   box-shadow: 0px 4px 5px rgb(46, 45, 45);
   width: 85%;
- 
 }
 
 /* .crypto-card:hover > .crypto-info {
@@ -158,44 +154,45 @@ video {
 }
 
 footer {
-    height: 5rem;
-    display: flex;
-    align-items: center;
-    z-index: 2000;
-    justify-content: center;
-    width: 100%;
-
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  z-index: 2000;
+  justify-content: center;
+  width: 100%;
 }
 
-.facebook-logo, .twitter-logo, .instagram-logo {
-    color: rgb(141, 137, 137);
-    font-size: 24px;
-    margin: 1rem;
-    transition: color .5s ease-in-out, transform .5s ease-in-out;
+.facebook-logo,
+.twitter-logo,
+.instagram-logo {
+  color: rgb(141, 137, 137);
+  font-size: 24px;
+  margin: 1rem;
+  transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .facebook-logo:hover {
-    color: rgb(48, 78, 179);
-    transform: scale(1.2);
+  color: rgb(48, 78, 179);
+  transform: scale(1.2);
 }
 
 .twitter-logo:hover {
-    color:rgb(78, 158, 233);
-    transform: scale(1.2);
+  color: rgb(78, 158, 233);
+  transform: scale(1.2);
 }
 
 .instagram-logo:hover {
-    color: rgb(223, 138, 197);
-    transform: scale(1.2);
+  color: rgb(223, 138, 197);
+  transform: scale(1.2);
 }
 
 @keyframes blue {
   0% {
-    transform: rotate(10deg)
+    transform: rotate(10deg);
   }
 
   3% {
-    transform: rotate(20deg)
+    transform: rotate(20deg);
   }
 
   6% {
@@ -238,7 +235,7 @@ footer {
   }
 
   36% {
-    transform: rotate(130deg)
+    transform: rotate(130deg);
   }
 
   39% {
@@ -274,7 +271,7 @@ footer {
     transform: rotate(230deg);
   }
   69% {
-    transform:rotate(240deg);
+    transform: rotate(240deg);
   }
   72% {
     transform: rotate(250deg);
@@ -317,15 +314,11 @@ footer {
   border: none;
 }
 
-
 .offline {
   color: red;
-    font-family: "Inconsolata", monospace;
-
+  font-family: "Inconsolata", monospace;
 }
 
 .nav h1 {
   margin-right: 2rem;
 }
-
-
