@@ -20,12 +20,12 @@ const fetchCrypto = async () => {
         } = item;
         let priceChange3 = [...price_change_24h.toString()];
         if (priceChange3.length > 7) {
-          priceChange3.length = 7;
+          priceChange3.length = 6;
         }
         return `<div class="crypto-card">
             <div class="head-div"><h2 class="crypto-title">${symbol}</h2><img src="${image}" class="crypto-image"></div>
             <div class="crypto-info">
-            <p class="crypto-price">Current Price: <span class="current-price">${current_price}</span> </p>
+            <p class="crypto-price">Current Price: <span class="current-price">$${current_price}</span> </p>
             <p class="crypto-price">24 Hour High: <span class=
             "price-span">$${high_24h}</span></p>
             <p class="crypto-price">24 Hour Low: <span class=
