@@ -2,6 +2,7 @@ const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd";
 const p = document.querySelector(".p");
 const cryptoBox = document.querySelector(".crypto-box");
 const nav = document.querySelector(".nav");
+const card = document.querySelector(".crypto-card");
 
 const fetchCrypto = async () => {
   try {
@@ -20,17 +21,17 @@ const fetchCrypto = async () => {
         } = item;
         let priceChange3 = [...price_change_24h.toString()];
         if (priceChange3.length > 7) {
-          priceChange3.length = 6;
+          priceChange3.length = 7;
         }
         return `<div class="crypto-card">
             <div class="head-div"><h2 class="crypto-title">${symbol}</h2><img src="${image}" class="crypto-image"></div>
             <div class="crypto-info">
-            <p class="crypto-price">Current Price: <span class="current-price">$${current_price}</span> </p>
-            <p class="crypto-price">24 Hour High: <span class=
-            "price-span">$${high_24h}</span></p>
-            <p class="crypto-price">24 Hour Low: <span class=
+            <p class="crypto-price">Current Price - <span class="current-price">${current_price}</span> </p>
+            <p class="crypto-price">24 Hour High - <span class=
+            "price-span">${high_24h}</span></p>
+            <p class="crypto-price">24 Hour Low - <span class=
             "bad-span">$${low_24h}</span></p>
-            <p class="crypto-price">24 Hour Change: <span>$${priceChange3.join(
+            <p class="crypto-price">24 Hour Change - <span>${priceChange3.join(
               ""
             )}</span></p>
             </div>
@@ -41,13 +42,10 @@ const fetchCrypto = async () => {
     if (nav.children.length > 1) {
       nav.lastElementChild.remove();
     }
-    const div = document.createElement("button");
-    div.classList.add("red");
-    div.innerHTML = '<i class="fa-solid fa-spinner"></i>';
-    nav.append(div);
 
     const cards = await [...document.querySelectorAll(".crypto-card")];
     const currentPrice = [...document.querySelectorAll(".current-price")];
+
     cards.forEach((card) => {
       let newPrice =
         card.lastElementChild.lastElementChild.firstChild.nextSibling
@@ -58,6 +56,9 @@ const fetchCrypto = async () => {
         card.lastElementChild.lastElementChild.firstElementChild;
       let priceChange =
         card.lastElementChild.lastElementChild.firstElementChild.textContent;
+      card.addEventListener("click", () => {
+        card.classList.toggle("big");
+      });
       let priceChange2 = [...priceChange];
 
       if (newPrice.includes("-")) {

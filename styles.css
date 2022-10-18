@@ -26,7 +26,6 @@
 
 .hero {
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,32 +61,40 @@
   opacity: 1;
 }
 
+@keyframes priceFetch {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .crypto-card {
-  height: 250px;
-  width: 275px;
+  border-radius: 10px;
+  height: 200px;
+  width: 225px;
   overflow: hidden;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
   margin: 1rem 1rem;
-  color: white;
-  font-family: "Inconsolata", monospace;
-  text-transform: uppercase;
-  background-color: rgb(37, 36, 36);
+  color: rgb(204, 204, 204);
+  font-family: "Orbitron", sans-serif;
+  background-color: rgba(48, 70, 90, 0.38);
   transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out,
     height 0.5s ease-in-out, width 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 15px;
   cursor: pointer;
 }
 
 .crypto-card h2 {
   font-size: 20px;
+  text-transform: uppercase;
 }
 
 .card-active {
   transform: scale(1.1);
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
   height: 200px;
   width: 200px;
 }
@@ -102,18 +109,13 @@
 .crypto-info {
   transition: opacity 1.5s ease-in-out;
   font-size: 12px;
-  background-color: rgb(31, 30, 30);
-  padding: 0.5rem 1rem;
-  box-shadow: 0px 4px 5px rgb(46, 45, 45);
-  width: 85%;
+  background-color: none;
+  padding: 0.1rem;
 }
 
 .crypto-info p {
-  padding: 0.5rem;
-  text-align: center;
-  border-bottom: 1px solid rgb(124, 124, 124);
-  border-radius: 10px;
-  margin-bottom: 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(141, 137, 137, 0.35);
 }
 
 /* .crypto-card:hover > .crypto-info {
@@ -122,6 +124,7 @@
 
 .crypto-title {
   padding: 0.25rem;
+  color: rgb(255, 255, 255);
 }
 
 .crypto-price {
@@ -129,16 +132,22 @@
 }
 
 .price-span {
-  color: rgb(35, 230, 35);
+  color: rgb(64, 210, 64);
+  font-size: 0.9rem;
+  font-weight: bolder;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .bad-span {
-  color: red;
+  color: rgb(220, 53, 53);
+  font-size: 0.9rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .crypto-image {
-  height: 25px;
+  height: 35px;
   padding: 0.2rem;
+  animation: priceFetch 1s 1;
 }
 
 .head-div {
@@ -157,7 +166,7 @@ video {
   left: 0;
   position: fixed;
   object-fit: cover;
-  opacity: 0.9;
+  opacity: 1;
   height: 100%;
   width: 100%;
 }
@@ -196,131 +205,26 @@ footer {
 }
 
 @keyframes blue {
-  0% {
-    transform: rotate(10deg);
+  from {
+    transform: rotate(0deg);
   }
 
-  3% {
-    transform: rotate(20deg);
-  }
-
-  6% {
-    transform: rotate(30deg);
-  }
-
-  9% {
-    transform: rotate(40deg);
-  }
-
-  12% {
-    transform: rotate(50deg);
-  }
-
-  15% {
-    transform: rotate(60deg);
-  }
-
-  18% {
-    transform: rotate(70deg);
-  }
-
-  21% {
-    transform: rotate(80deg);
-  }
-  24% {
-    transform: rotate(90deg);
-  }
-
-  27% {
-    transform: rotate(100deg);
-  }
-
-  30% {
-    transform: rotate(110deg);
-  }
-
-  33% {
-    transform: rotate(120deg);
-  }
-
-  36% {
-    transform: rotate(130deg);
-  }
-
-  39% {
-    transform: rotate(140deg);
-  }
-  42% {
-    transform: rotate(150deg);
-  }
-
-  45% {
-    transform: rotate(160deg);
-  }
-  48% {
-    transform: rotate(170deg);
-  }
-  51% {
-    transform: rotate(180deg);
-  }
-  54% {
-    transform: rotate(190deg);
-  }
-  57% {
-    transform: rotate(200deg);
-  }
-  60% {
-    transform: rotate(210deg);
-  }
-
-  63% {
-    transform: rotate(220deg);
-  }
-  66% {
-    transform: rotate(230deg);
-  }
-  69% {
-    transform: rotate(240deg);
-  }
-  72% {
-    transform: rotate(250deg);
-  }
-  75% {
-    transform: rotate(260deg);
-  }
-  78% {
-    transform: rotate(270deg);
-  }
-  81% {
-    transform: rotate(280deg);
-  }
-  84% {
-    transform: rotate(290deg);
-  }
-  87% {
-    transform: rotate(300deg);
-  }
-  90% {
-    transform: rotate(310deg);
-  }
-  93% {
-    transform: rotate(320deg);
-  }
-  96% {
-    transform: rotate(340deg);
-  }
-
-  99% {
+  to {
     transform: rotate(360deg);
   }
 }
 
 .red {
-  animation: blue 2s 5;
-  color: rgb(35, 230, 35);
+  animation: blue 2s infinite linear;
+  color: rgb(117, 212, 168);
   background: none;
   outline: none;
   border: none;
+  font-size: 1.5rem;
+}
+
+.big {
+  transform: scale(1.1);
 }
 
 .offline {
@@ -330,4 +234,14 @@ footer {
 
 .nav h1 {
   margin-right: 2rem;
+}
+
+.currency-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 5rem;
+  border: 1px solid white;
+  z-index: 1000;
 }
