@@ -2,7 +2,6 @@ const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd";
 const p = document.querySelector(".p");
 const cryptoBox = document.querySelector(".crypto-box");
 const nav = document.querySelector(".nav");
-const card = document.querySelector(".crypto-card");
 
 const fetchCrypto = async () => {
   try {
@@ -56,9 +55,6 @@ const fetchCrypto = async () => {
         card.lastElementChild.lastElementChild.firstElementChild;
       let priceChange =
         card.lastElementChild.lastElementChild.firstElementChild.textContent;
-      card.addEventListener("click", () => {
-        card.classList.toggle("big");
-      });
       let priceChange2 = [...priceChange];
 
       if (newPrice.includes("-")) {
